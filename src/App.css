@@ -10,6 +10,16 @@
   padding: 50px;
 }
 
+.listaSayHello{
+  color: white;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.marginBotao{
+  margin: 5px;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 20vmin;
