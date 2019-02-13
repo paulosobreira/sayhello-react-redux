@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 
 export default class Listagem extends Component {
 
-    componentWillMount(){
-        console.log(this.props.listaHello);
-    }
-
     render() {
         return (
             <div className="listaSayHello">
@@ -18,6 +14,15 @@ export default class Listagem extends Component {
                         })
                     }                    
                 </ul>
+                <ul>
+                    {
+                        this.props.listaBye.map(function (bye) {
+                            return (
+                                <li key={bye.numero} >{bye.numero} - {bye.texto} </li>
+                            );
+                        })
+                    }                    
+                </ul>                
             </div>
         );
     }

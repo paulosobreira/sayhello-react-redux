@@ -36,7 +36,7 @@ class App extends Component {
         </header>
         <div className='divBotao'>
           <Botao sayHello={(hello) => this.sayHello(hello)} say={"Say Hello"} />
-          <Listagem  listaHello={this.state.listaHello} />
+          <Listagem  listaHello={this.state.listaHello}  listaBye={[]} />
         </div>
       </div>
     );
