@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <Provider store={store}>
+        <App />
         <AppRedux />
     </Provider>
     , document.getElementById('root'));
