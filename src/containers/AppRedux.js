@@ -3,23 +3,10 @@ import logo from '../logo.svg';
 import '../App.css';
 import Botao from '../componentes/Botao';
 import Listagem from '../componentes/Listagem';
+import {connect} from "react-redux";
+import sayHelloRedux from '../actions/sayHelloRedux';
 
-class App extends Component {
-
-
-	constructor(){
-		super();
-		this.state = { listaHello:[]};
-	}
-
-  sayHello = (hello) =>  {
-    hello.numero =  this.state.listaHello.length;
-    this.state.listaHello.push(hello);
-    this.setState(this.state);
-    console.log(this.state);
-  }
-
-
+class AppRedux extends Component {
   render() {
     return (
       <div className="App">
@@ -38,15 +25,27 @@ class App extends Component {
           </a>
         </header>
         <div className='divBotao'>
-          <Botao sayHello={(hello) => this.sayHello(hello)} say={"Say Hello"} />
-          <Listagem  listaHello={this.state.listaHello} />
+          <Botao sayHello={(hello) => this.props.sayHelloRedux(hello)} say={"Say Hello Redux"} />
+          <Listagem  listaHello={this.props.listaHello} />
         </div>
       </div>
     );
   }
 }
 
-export default App;
 
+const mapStateToProps = (state) => {
+  return {
+    listaHello: state.listaHello
+  };
+};
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+      sayHelloRedux: (hello) => {
+            dispatch(sayHelloRedux(hello));
+        }
+    };
+};
 
+export default connect(mapStateToProps, mapDispatchToProps)(AppRedux);
