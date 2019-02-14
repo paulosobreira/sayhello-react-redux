@@ -1,38 +1,31 @@
 Projeto criado com [Create React App](https://github.com/facebook/create-react-app).
 
-Para executar:
 
-### `npm start`
+## Implementação da manipulação de stado do react e da store do redux
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. State do react
+2. Store do redux
+3. Store Async do redux
+4. Promise com redux
+5. Combinar redux
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Como testar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para rodar local, baixar o codigo e executar:
 
-### Code Splitting
+```$ npm install ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```$ npm start```
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+>No repositório Dockerhub:
 
-### Making a Progressive Web App
+[sowbreira/sayhello-react-redux](https://cloud.docker.com/u/sowbreira/repository/docker/sowbreira/sayhello-react-redux)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+>Pode ser executado no [Play with Docker](https://labs.play-with-docker.com/)
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+docker run --name sayhello-react-redux -p 3000:3000  sowbreira/sayhello-react-redux
+```
