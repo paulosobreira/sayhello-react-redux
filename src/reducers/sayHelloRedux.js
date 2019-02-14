@@ -6,5 +6,14 @@ export default function sayHelloRedux(state={ listaHello:[]},action){
         }
         return newState
     }
+
+    if(action.type === 'SAY_HELLO_PROMISE_FULFILLED'){
+        action.payload.numero = state.listaHello.length+1;  
+        let newState = { ...state,
+            listaHello : [...state.listaHello,action.payload]
+        }
+        return newState
+    }
+
     return state;
 }

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import '../App.css';
 import Botao from '../componentes/Botao';
 import Listagem from '../componentes/Listagem';
-import { connect } from "react-redux";
-import sayHelloRedux from '../actions/sayHelloRedux';
-import sayHelloReduxAsync from '../actions/sayHelloReduxAsync';
-import sayGoodBye from '../actions/sayGoodBye';
+import {connect} from "react-redux";
+import sayHelloRedux from '../actions/sayHelloReduxAction';
+import sayHelloReduxAsync from '../actions/sayHelloReduxAsyncAction';
+import sayGoodBye from '../actions/sayGoodByeAction';
+import sayHelloReduxPromise from '../actions/sayHelloReduxPromiseAction';
 
 class AppRedux extends Component {
   render() {
@@ -13,6 +14,7 @@ class AppRedux extends Component {
       <div className='divBotao'>
         <Botao sayHello={(hello) => this.props.sayHelloRedux(hello)} say={"Say Hello Redux"} />
         <Botao sayHello={(hello) => this.props.sayHelloReduxAsync(hello)} say={"Say Hello Redux Async"} />
+        <Botao sayHello={(hello) => this.props.sayHelloReduxPromise(hello)} say={"Promise Say Hello Redux"} />
         <Botao sayHello={(hello) => this.props.sayGoodBye(hello)} say={"Say GoodBye Another Redux"} />
         <Listagem listaHello={this.props.listaHello} listaBye={this.props.listaBye} />
       </div>
@@ -38,6 +40,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     sayGoodBye: (bye) => {
       dispatch(sayGoodBye(bye));
+    },
+    sayHelloReduxPromise: (hello) => {
+      dispatch(sayHelloReduxPromise(hello));
     }
   };
 };
