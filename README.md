@@ -27,5 +27,5 @@ Para rodar local, baixar o codigo e executar:
 
 
 ```
-docker run --name sayhello-react-redux -p 3000:3000  sowbreira/sayhello-react-redux
+docker run --name sayhello-react-redux -p 5000:5000  sowbreira/sayhello-react-redux
 ```
