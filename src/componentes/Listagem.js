@@ -9,7 +9,7 @@ export default class Listagem extends Component {
                     {
                         this.props.listaHello.map(function (hello) {
                             return (
-                                <li key={hello.numero} >{hello.texto} - {hello.numero}</li>
+                                <li key={hello.texto+hello.numero}> {hello.texto} - {hello.numero}</li>
                             );
                         })
                     }                    
@@ -18,7 +18,7 @@ export default class Listagem extends Component {
                     {
                         this.props.listaBye.map(function (bye) {
                             return (
-                                <li key={bye.numero} >{bye.numero} - {bye.texto} </li>
+                                <li key={bye.texto+bye.numero}> {bye.numero} - {bye.texto} </li>
                             );
                         })
                     }                    
